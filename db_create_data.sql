@@ -93,6 +93,14 @@ CREATE TABLE mm_color_pref (
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Create mm_country table
+CREATE TABLE mm_country (
+    id SERIAL PRIMARY KEY,
+    country_name VARCHAR(100),
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Create mm_province table
 CREATE TABLE mm_province (
     id SERIAL PRIMARY KEY,
@@ -102,13 +110,6 @@ CREATE TABLE mm_province (
     updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create mm_country table
-CREATE TABLE mm_country (
-    id SERIAL PRIMARY KEY,
-    country_name VARCHAR(100),
-    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
-);
 
 -- Create mm_city table
 CREATE TABLE mm_city (
